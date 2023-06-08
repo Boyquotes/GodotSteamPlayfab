@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://dw36trk3wpegd"]
+
+[ext_resource type="Script" path="res://scenes/scripts/GameServer.gd" id="1_w25y6"]
+
+[node name="GameServer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w25y6")
+
+[node name="ServerLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 10.0
+offset_right = 166.0
+offset_bottom = 72.0
+scale = Vector2(1.00837, 0.989418)
+theme_override_font_sizes/font_size = 50
+text = "Server"
+
+[node name="AddClientButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -179.0
+offset_top = 10.0
+offset_right = -8.0
+offset_bottom = 65.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 34
+text = "Add client"
+
+[node name="PlayersVBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -294.0
+offset_top = -134.0
+offset_right = 294.0
+offset_bottom = 134.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="AddClientButton" to="." method="_on_add_client_button_pressed"]

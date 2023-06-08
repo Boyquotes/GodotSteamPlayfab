@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://kdyc8hk3u63d"]
+
+[ext_resource type="Script" path="res://scenes/scripts/GameClient.gd" id="1_0f8k6"]
+
+[node name="GameClient" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0f8k6")
+
+[node name="ClientLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_right = 166.0
+offset_bottom = 72.0
+scale = Vector2(1.00837, 0.989418)
+theme_override_font_sizes/font_size = 50
+text = "Client"
+
+[node name="PeerIdLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -89.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 48.0
+grow_horizontal = 0
+scale = Vector2(1.00837, 0.989418)
+theme_override_font_sizes/font_size = 25
+text = "peer id"
+
+[node name="ReadyButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.5
+offset_top = -27.5
+offset_right = 85.5
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 34
+text = "Ready"
+
+[node name="StatusLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = -108.0
+offset_right = 42.5
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00837, 0.989418)
+theme_override_font_sizes/font_size = 25
+text = "Status Label"
+
+[connection signal="pressed" from="ReadyButton" to="." method="_on_ready_button_pressed"]
